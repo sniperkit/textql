@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	"github.com/sniperkit/textql/pkg/inputs"
-	"github.com/sniperkit/textql/pkg/test_util"
+	"github.com/sniperkit/textql/tests"
 )
 
 var (

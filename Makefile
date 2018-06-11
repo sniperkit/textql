@@ -4,18 +4,31 @@ GO15VENDOREXPERIMENT=1
 
 PROG_NAME := "textql"
 
-all: deps test build install
+all: deps test build install version
 
-build: 
+build: deps
 	@go build -ldflags "-X main.VERSION=`cat VERSION`" -o ./bin/$(PROG_NAME) ./cmd/$(PROG_NAME)/*.go
 
-install:
-	@go install -ldflags "-X main.VERSION=`cat VERSION`" ./cmd/$(PROG_NAME)/*.go
+version: deps
+	@which $(PROG_NAME)
+	@$(PROG_NAME) --version
 
-fast:
+install: deps
+	@go install -ldflags "-X main.VERSION=`cat VERSION`" ./cmd/$(PROG_NAME)/*.go
+	@$(PROG_NAME) --version
+
+fast: deps
 	@go build -i -ldflags "-X main.VERSION=`cat VERSION`-dev" -o ./bin/$(PROG_NAME) ./cmd/$(PROG_NAME)/*.go
+	@$(PROG_NAME) --version
+
+fix-darwin: sqlite3-darwin deps
+
+sqlite3-darwin:
+	@brew update
+	@brew reinstall sqlite
 
 deps:
+	@go get -v -u github.com/mattn/go-sqlite3
 	@glide install --strip-vendor
 
 test:
