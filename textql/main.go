@@ -9,10 +9,10 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/dinedal/textql/inputs"
-	"github.com/dinedal/textql/outputs"
-	"github.com/dinedal/textql/storage"
-	"github.com/dinedal/textql/util"
+	"github.com/sniperkit/textql/inputs"
+	"github.com/sniperkit/textql/outputs"
+	"github.com/sniperkit/textql/storage"
+	"github.com/sniperkit/textql/util"
 )
 
 type commandLineOptions struct {
