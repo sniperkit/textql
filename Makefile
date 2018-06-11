@@ -4,18 +4,18 @@ GO15VENDOREXPERIMENT=1
 
 PROG_NAME := "textql"
 
-all: $(PROG_NAME)
+all: deps test build install
 
-textql: deps test
+build: 
 	@go build -ldflags "-X main.VERSION=`cat VERSION`" -o ./bin/$(PROG_NAME) ./cmd/$(PROG_NAME)/*.go
 
-install: deps test
+install:
 	@go install -ldflags "-X main.VERSION=`cat VERSION`" ./cmd/$(PROG_NAME)/*.go
 
 fast:
 	@go build -i -ldflags "-X main.VERSION=`cat VERSION`-dev" -o ./bin/$(PROG_NAME) ./cmd/$(PROG_NAME)/*.go
 
-deps: glide
+deps:
 	@glide install --strip-vendor
 
 test:
@@ -23,7 +23,7 @@ test:
 	@go test ./pkg/storage/
 
 clean:
-	@rm ./glide
+	@go clean
 	@rm -fr ./bin
 	@rm -fr ./dist
 
