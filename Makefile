@@ -14,7 +14,7 @@ version: deps
 	@$(PROG_NAME) --version
 
 install: deps
-	@go install -ldflags "-X main.VERSION=`cat VERSION`" ./cmd/$(PROG_NAME)/*.go
+	@go install -ldflags "-X main.VERSION=`cat VERSION`" ./cmd/$(PROG_NAME)
 	@$(PROG_NAME) --version
 
 fast: deps
