@@ -9,8 +9,8 @@ import (
 	"log"
 	"regexp"
 
-	"github.com/sniperkit/textql/inputs"
-	"github.com/sniperkit/textql/sqlparser"
+	"github.com/sniperkit/textql/pkg/inputs"
+	"github.com/sniperkit/textql/pkg/sqlparser"
 
 	sqlite3 "github.com/mattn/go-sqlite3"
 )

@@ -10,7 +10,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/sniperkit/textql/sqlparser/sqltypes"
+	"github.com/sniperkit/textql/pkg/sqlparser/sqltypes"
 )
 
 type bindLocation struct {

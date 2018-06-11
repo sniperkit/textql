@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/sniperkit/textql/sqlparser/sqltypes"
+	"github.com/sniperkit/textql/pkg/sqlparser/sqltypes"
 )
 
 // Instructions for creating new types: If a type

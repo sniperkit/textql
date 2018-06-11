@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/sniperkit/textql/sqlparser/sqltypes"
+	"github.com/sniperkit/textql/pkg/sqlparser/sqltypes"
 )
 
 const EOFCHAR = 0x100

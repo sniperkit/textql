@@ -7,7 +7,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/sniperkit/textql/test_util"
+	"github.com/sniperkit/textql/pkg/test_util"
 )
 
 var (

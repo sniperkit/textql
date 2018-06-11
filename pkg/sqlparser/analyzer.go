@@ -9,7 +9,7 @@ package sqlparser
 import (
 	"fmt"
 
-	"github.com/sniperkit/textql/sqlparser/sqltypes"
+	"github.com/sniperkit/textql/pkg/sqlparser/sqltypes"
 )
 
 // GetTableName returns the table name from the SimpleTableExpr

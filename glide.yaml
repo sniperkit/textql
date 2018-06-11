@@ -1,4 +1,4 @@
-package: github.com/sniperkit/textql
+package: github.com/sniperkit/textql/pkg
 import:
   - package: github.com/mattn/go-sqlite3
     ref:     8897bf145272af4dd0305518cfb725a5b6d0541c

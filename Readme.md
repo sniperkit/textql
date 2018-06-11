@@ -7,7 +7,7 @@ Allows you to easily execute SQL against structured text like CSV or TSV.
 
 Example session:
 
-![textql_usage_session](https://raw.github.com/sniperkit/textql/master/textql_usage.gif)
+![textql_usage_session](https://raw.github.com/sniperkit/textql/pkg/master/textql_usage.gif)
 
 ## Major changes!
 
@@ -67,7 +67,7 @@ brew install textql
 **Build from source**
 
 ```bash
-go get -u github.com/sniperkit/textql/...
+go get -u github.com/sniperkit/textql/pkg/...
 ```
 
 ## Docker

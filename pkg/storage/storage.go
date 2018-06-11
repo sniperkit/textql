@@ -3,7 +3,7 @@ package storage
 import (
 	"database/sql"
 
-	"github.com/sniperkit/textql/inputs"
+	"github.com/sniperkit/textql/pkg/inputs"
 )
 
 // Storage implentors are expected to be SQL capable engines.
